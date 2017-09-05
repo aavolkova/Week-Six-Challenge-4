@@ -25,14 +25,22 @@
 </head>
 
 <body>
-
+    <!-- Navigation -->
     <nav th:replace="base :: navbar"></nav>
+    <!-- /.Navigation -->
 
+    <!-- Page Header -->
     <header th:replace="base :: header"></header>
+    <!-- /.Page Header -->
 
-    <div class="tagline-upper text-center text-heading text-shadow text-white mt-5 d-none d-lg-block">Robo Resume:</div>
 
-    <br><br>
+
+
+
+
+    <!--<div class="tagline-upper text-center text-heading text-shadow text-white mt-5 d-none d-lg-block">Robo Resume:</div>-->
+
+    <!--<br><br>-->
 
     <div class="container">
 
@@ -45,8 +53,8 @@
                 <!--<h5 th:inline="text"><strong>Full Name: </strong>[[${person.firstName}]] [[${person.lastName}]].</h5>-->
                 <!--<h5 th:inline="text"><strong> Email Address: </strong>[[${person.emailAddress}]].</h5>-->
 
-                <h5 th:text="${person.firstName} + ' ' + ${person.lastName}"></h5>
-                <h5 th:text="${person.emailAddress}"></h5>
+                <h5 style="font-weight: normal" th:text="${person.firstName} + ' ' + ${person.lastName}"></h5>
+                <h5 style="font-weight: normal" th:text="${person.emailAddress}"></h5>
                 <div>
                     <a th:href="@{/updatePerson/{id}(id=${person.id})}">Update</a>
                 </div>
@@ -65,8 +73,8 @@
             <div class="form-group">
                 <!--<h3>Education:</h3>-->
                 <div th:each="e:${person.educationalAchievements}">
-                    <h5 th:text="${e.degreeTitle} + ','"></h5>
-                    <h5 th:text="${e.educationalInstitution} + ', ' + ${e.graduateDate}"></h5>
+                    <h5 style="font-weight: normal" th:text="${e.degreeTitle} + ','"></h5>
+                    <h5 style="font-weight: normal" th:text="${e.educationalInstitution} + ', ' + ${e.graduateDate}"></h5>
                     <!--<h6 th:text="${e.graduateDate}"></h6>-->
                     <div>
                         <a th:href="@{/updateEducation/{id}(id=${e.id})}">Update</a>
@@ -87,11 +95,11 @@
             <div class="form-group">
 
                 <div th:each="w:${person.workExperience}">
-                    <h5 th:text="${w.positionTitle}"></h5>
-                    <h5 th:text="${w.organisation} + ', ' + ${w.startDate} + ' - ' + ${w.endDate}"></h5>
+                    <h5 style="font-weight: normal" th:text="${w.positionTitle}"></h5>
+                    <h5 style="font-weight: normal" th:text="${w.organisation} + ', ' + ${w.startDate} + ' - ' + ${w.endDate}"></h5>
                     <!--<h6 th:text="${w.startDate}"></h6>-->
                     <!--<h6 th:text="${w.endDate}"></h6>-->
-                    <h5 th:text="'Duty: ' + ${w.duty}"></h5>
+                    <h5 style="font-weight: normal" th:text="'Duty: ' + ${w.duty}"></h5>
                     <div>
                         <a th:href="@{/updateEmployment/{id}(id=${w.id})}">Update</a>
                         <a th:href="@{/deleteEmployment/{id}(id=${w.id})}">Delete</a>
@@ -118,7 +126,7 @@
                     <!--See sorted list of skills:-->
                     <!--<div th:each="s:${personSkills}">-->
                     <!--<h3>Skills:</h3>-->
-                    <h5 th:text="${s.skillTitle} + ', ' + ${s.skillRating}"></h5>
+                    <h5 style="font-weight: normal" th:text="${s.skillTitle} + ', ' + ${s.skillRating}"></h5>
                     <!--<h6 th:text="${s.skillRating}"></h6>-->
                     <div>
                         <a th:href="@{/updateSkills/{id}(id=${s.id})}">Update</a>
@@ -150,7 +158,7 @@
                 </div>
             </div>
             <!-- /.Enter more Info -->
-
+            <br>
             <!-- Links to other Pages-->
             <div class="container1">
                 <div class="row">
@@ -180,12 +188,12 @@
     <div th:replace="base :: footer"></div>
 
     <!-- Bootstrap core JavaScript -->
-    <script src="vendor/jquery/jquery.min.js"></script>
-    <script src="vendor/popper/popper.min.js"></script>
-    <script src="vendor/bootstrap/js/bootstrap.min.js"></script>
+    <script src="/vendor/jquery/jquery.min.js"></script>
+    <script src="/vendor/popper/popper.min.js"></script>
+    <script src="/vendor/bootstrap/js/bootstrap.min.js"></script>
 
     <!-- Custom scripts for this template -->
-    <script src="js/clean-blog.min.js"></script>
+    <script src="/js/clean-blog.min.js"></script>
 
 
 </body>

@@ -15,7 +15,7 @@ public class SecurityConfiguration extends WebSecurityConfigurerAdapter{
         http
                 .authorizeRequests()
 
-                .antMatchers( "/css/**", "/js/**", "/img/**", "/vendor/**").permitAll()
+                .antMatchers( "/css/**", "/js/**", "/img/**", "/vendor/**", "/mail/**", "/scss/**").permitAll()
                 .anyRequest().authenticated()
                 .and()
                 .formLogin().loginPage("/login").permitAll()
@@ -28,8 +28,8 @@ public class SecurityConfiguration extends WebSecurityConfigurerAdapter{
     protected void configure(AuthenticationManagerBuilder auth) throws Exception {
 
         auth.inMemoryAuthentication().
-                withUser("a").password("a").roles("USER");
-//                withUser("newuser").password("newuserpa$$").roles("USER");
+//                withUser("a").password("a").roles("USER");
+                withUser("newuser").password("newuserpa$$").roles("USER");
         // to add additional accounts, remove the semicolon at
         // the end of the previous command and add an additional user like below:
         //           .and()

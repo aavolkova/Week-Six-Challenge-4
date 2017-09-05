@@ -9,25 +9,27 @@
     <meta name="author" content="">
 
     <!-- Bootstrap core CSS -->
-    <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+    <link href="/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
 
     <!-- Custom fonts for this template -->
-    <link href="vendor/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+    <link href="/vendor/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
     <link href='https://fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic' rel='stylesheet' type='text/css'>
     <link href='https://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800' rel='stylesheet' type='text/css'>
 
     <!-- Custom styles for this template -->
-    <link href="css/clean-blog.min.css" rel="stylesheet">
+    <link href="/css/clean-blog.min.css" rel="stylesheet">
 
     <title>Robo Resume - Result Person</title>
 
 </head>
 
 <body>
+    <!-- Navigation -->
     <nav th:replace="base :: navbar"></nav>
+    <!-- /.Navigation -->
 
     <!-- Page Header -->
-    <header th:fragment="header" class="masthead" style="background-image: url('img/banner-finger-keyboard.jpg')">
+    <header th:fragment="header" class="masthead" style="background-image: url('/img/banner-finger-keyboard.jpg')">
         <div class="container">
             <div class="row">
                 <div class="col-lg-8 col-md-10 mx-auto">
@@ -47,9 +49,10 @@
 
 
 
-    <div class="tagline-upper text-center text-heading text-shadow text-white mt-5 d-none d-lg-block">Educational Achievement</div>
 
-    <br><br>
+    <!--<div class="tagline-upper text-center text-heading text-shadow text-white mt-5 d-none d-lg-block">Educational Achievement</div>-->
+
+    <!--<br><br>-->
 
     <div class="container">
 
@@ -64,9 +67,9 @@
                 <!--<h5 th:text="'Educational Institution: ' + ${newEducation.educationalInstitution}"></h5>-->
                 <!--<h5 th:text="'Graduate Year: ' + ${newEducation.graduateDate}"></h5>-->
 
-                <h5 th:inline="text"><strong>Degree Title: </strong>[[${newEducation.degreeTitle}]]</h5>
-                <h5 th:inline="text"><strong>Institution: </strong>[[${newEducation.educationalInstitution}]]</h5>
-                <h5 th:inline="text"><strong>Graduate Year: </strong>[[${newEducation.graduateDate}]]</h5>
+                <h5 style="font-weight: normal" th:inline="text"><strong>Degree Title: </strong>[[${newEducation.degreeTitle}]]</h5>
+                <h5 style="font-weight: normal" th:inline="text"><strong>Institution: </strong>[[${newEducation.educationalInstitution}]]</h5>
+                <h5 style="font-weight: normal" th:inline="text"><strong>Graduate Year: </strong>[[${newEducation.graduateDate}]]</h5>
 
                 <a th:href="@{/updateEducation/{id}(id=${newEducation.id})}">Update</a>
             </div>
@@ -113,12 +116,12 @@
     <div th:replace="base :: footer"></div>
 
     <!-- Bootstrap core JavaScript -->
-    <script src="vendor/jquery/jquery.min.js"></script>
-    <script src="vendor/popper/popper.min.js"></script>
-    <script src="vendor/bootstrap/js/bootstrap.min.js"></script>
+    <script src="/vendor/jquery/jquery.min.js"></script>
+    <script src="/vendor/popper/popper.min.js"></script>
+    <script src="/vendor/bootstrap/js/bootstrap.min.js"></script>
 
     <!-- Custom scripts for this template -->
-    <script src="js/clean-blog.min.js"></script>
+    <script src="/js/clean-blog.min.js"></script>
 
 
 </body>
